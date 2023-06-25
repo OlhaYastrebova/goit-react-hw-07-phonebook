@@ -1,10 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
+import { Provider } from 'react-redux';
+import App from './components/App';
+import { store } from './redux/store';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+        <App />
+    </Provider>
   </React.StrictMode>
 );
+
+
+// npm install @reduxjs/toolkit
+// npm install react-redux
+// npm install @reduxjs/toolkit react-redux  ???
+// npm i redux-persist
+// npm i axios
